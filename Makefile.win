@@ -1,0 +1,70 @@
+# Project: final
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o search2.o se5arch.o printresult.o printgpa.o marksinput.o inputprofile.o printcgpa.o menu.o calculatecgpa.o inputmarks.o subject.o searching.o searchmenu.o update.o
+LINKOBJ  = main.o search2.o se5arch.o printresult.o printgpa.o marksinput.o inputprofile.o printcgpa.o menu.o calculatecgpa.o inputmarks.o subject.o searching.o searchmenu.o update.o
+LIBS     = -L"F:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"F:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = final.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+search2.o: search2.c
+	$(CC) -c search2.c -o search2.o $(CFLAGS)
+
+se5arch.o: se5arch.c
+	$(CC) -c se5arch.c -o se5arch.o $(CFLAGS)
+
+printresult.o: printresult.c
+	$(CC) -c printresult.c -o printresult.o $(CFLAGS)
+
+printgpa.o: printgpa.c
+	$(CC) -c printgpa.c -o printgpa.o $(CFLAGS)
+
+marksinput.o: marksinput.c
+	$(CC) -c marksinput.c -o marksinput.o $(CFLAGS)
+
+inputprofile.o: inputprofile.c
+	$(CC) -c inputprofile.c -o inputprofile.o $(CFLAGS)
+
+printcgpa.o: printcgpa.c
+	$(CC) -c printcgpa.c -o printcgpa.o $(CFLAGS)
+
+menu.o: menu.c
+	$(CC) -c menu.c -o menu.o $(CFLAGS)
+
+calculatecgpa.o: calculatecgpa.c
+	$(CC) -c calculatecgpa.c -o calculatecgpa.o $(CFLAGS)
+
+inputmarks.o: inputmarks.c
+	$(CC) -c inputmarks.c -o inputmarks.o $(CFLAGS)
+
+subject.o: subject.c
+	$(CC) -c subject.c -o subject.o $(CFLAGS)
+
+searching.o: searching.c
+	$(CC) -c searching.c -o searching.o $(CFLAGS)
+
+searchmenu.o: searchmenu.c
+	$(CC) -c searchmenu.c -o searchmenu.o $(CFLAGS)
+
+update.o: update.c
+	$(CC) -c update.c -o update.o $(CFLAGS)
